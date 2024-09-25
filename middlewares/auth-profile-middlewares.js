@@ -12,7 +12,7 @@ const AuthProfileMiddleware = async (req, res, next) => {
   const jwtToken = token.replace("Bearer", "").trim();
 
   try {
-    const isVerified = jwt.verify(jwtToken, process.env.JWT_KEY);    
+    const isVerified = jwt.verify(jwtToken, "CESPLAJWTTOKEN_");    
     const userData = await User.findOne({ email: isVerified.email });   
     req.user = userData;
     req.token = jwtToken; 

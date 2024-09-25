@@ -46,7 +46,7 @@ userSchema.methods.generateToken = async function () {
         email: this.email,
         isAdmin: this.isAdmin,
       },
-      process.env.JWT_KEY,
+      "CESPLAJWTTOKEN_",
       {
         expiresIn: "1d",
       }

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose"); 
-const URL = process.env.MONGODB_URL; 
+const URL = "mongodb+srv://dev5cespl:Sr8zJGeBQpi8WSl4@cluster0.ad4x3.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0"; 
 
 const connectDb = async () => {
   try {
@@ -7,7 +7,7 @@ const connectDb = async () => {
     console.log('connected');
   } catch (error) {
     console.error("Connection error");
-    process.exit(0);
+    process.exit(1);
   }
 };
 
