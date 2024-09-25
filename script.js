@@ -21,6 +21,10 @@ app.use("/api/contact", contactRouter);
 app.use("/api/orders", orderRouter);
 app.use(errorMiddleware);
 
+app.get('/',function(req,res){
+  res.send('hii');
+})
+
 // for server running
 const Port = 5000;
 connectDb().then(() => {
